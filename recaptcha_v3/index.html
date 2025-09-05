@@ -9,10 +9,8 @@
       
       
       
-        <link rel="prev" href="../history/">
+        <link rel="prev" href="../recaptcha/">
       
-      
-        <link rel="next" href="../types/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +18,7 @@
     
     
       
-        <title>How it Works - CAPTCHA Documentation</title>
+        <title>reCAPTCHA v3 Details - CAPTCHA Documentation</title>
       
     
     
@@ -62,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#how-captcha-works" class="md-skip">
+        <a href="#google-recaptcha-v3-2018-detailed-analysis" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              How it Works
+              reCAPTCHA v3 Details
             
           </span>
         </div>
@@ -235,32 +233,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    How it Works
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../working/" class="md-nav__link">
         
   
   
@@ -271,86 +247,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#general-mechanism" class="md-nav__link">
-    <span class="md-ellipsis">
-      General Mechanism
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#core-design-principles" class="md-nav__link">
-    <span class="md-ellipsis">
-      Core Design Principles
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-text-based-captcha" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example: Text-based CAPTCHA
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-image-based-captcha" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example: Image-based CAPTCHA
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#behavioral-analysis-modern-recaptcha" class="md-nav__link">
-    <span class="md-ellipsis">
-      Behavioral Analysis (Modern reCAPTCHA)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Behavioral Analysis (Modern reCAPTCHA)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    <span class="md-ellipsis">
-      Summary
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -403,10 +299,32 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../recaptcha_v3/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    reCAPTCHA v3 Details
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -417,6 +335,164 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-recaptcha-v3-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      How reCAPTCHA v3 Works
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How reCAPTCHA v3 Works">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-behavioral-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Behavioral Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-browser-and-device-signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Browser and Device Signals
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-ip-reputation" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. IP Reputation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-machine-learning-scoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Machine Learning Scoring
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strengths-of-recaptcha-v3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strengths of reCAPTCHA v3
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#weaknesses-and-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Weaknesses and Limitations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Weaknesses and Limitations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-false-positives-and-negatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. False Positives and Negatives
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-privacy-concerns" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Privacy Concerns
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-dependence-on-google" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Dependence on Google
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-accessibility-challenges" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Accessibility Challenges
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-advanced-bot-evasion" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Advanced Bot Evasion
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-limited-transparency" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Limited Transparency
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -470,50 +546,128 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#general-mechanism" class="md-nav__link">
+  <a href="#how-recaptcha-v3-works" class="md-nav__link">
     <span class="md-ellipsis">
-      General Mechanism
+      How reCAPTCHA v3 Works
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#core-design-principles" class="md-nav__link">
-    <span class="md-ellipsis">
-      Core Design Principles
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-text-based-captcha" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example: Text-based CAPTCHA
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-image-based-captcha" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example: Image-based CAPTCHA
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#behavioral-analysis-modern-recaptcha" class="md-nav__link">
-    <span class="md-ellipsis">
-      Behavioral Analysis (Modern reCAPTCHA)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Behavioral Analysis (Modern reCAPTCHA)">
+    <nav class="md-nav" aria-label="How reCAPTCHA v3 Works">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-behavioral-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Behavioral Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-browser-and-device-signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Browser and Device Signals
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-ip-reputation" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. IP Reputation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-machine-learning-scoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Machine Learning Scoring
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strengths-of-recaptcha-v3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strengths of reCAPTCHA v3
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#weaknesses-and-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Weaknesses and Limitations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Weaknesses and Limitations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-false-positives-and-negatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. False Positives and Negatives
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-privacy-concerns" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Privacy Concerns
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-dependence-on-google" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Dependence on Google
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-accessibility-challenges" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Accessibility Challenges
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-advanced-bot-evasion" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Advanced Bot Evasion
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-limited-transparency" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Limited Transparency
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#summary" class="md-nav__link">
@@ -545,88 +699,96 @@
 
 
 
-<h1 id="how-captcha-works">How CAPTCHA Works</h1>
-<p>CAPTCHA systems are based on the principle of a <strong>Turing test</strong>:<br />
-a task that humans can solve easily, but machines find difficult.</p>
-<p>The key idea is <strong>asymmetry</strong>:<br />
-- For <strong>humans</strong>, solving a CAPTCHA should take only a few seconds.<br />
-- For <strong>bots</strong>, solving it should be computationally expensive or nearly impossible.</p>
+<h1 id="google-recaptcha-v3-2018-detailed-analysis">Google reCAPTCHA v3 (2018) – Detailed Analysis</h1>
+<p><strong>reCAPTCHA v3</strong> is Google’s most advanced CAPTCHA system.<br />
+It is <strong>invisible</strong> to users and assigns a <strong>risk score</strong> to each visitor to determine if they are likely human or a bot.  </p>
+<p>Unlike earlier versions, there is <strong>no challenge presented to users</strong>. The system works silently in the background.</p>
 <hr />
-<h2 id="general-mechanism">General Mechanism</h2>
-<ol>
-<li><strong>Challenge Generation</strong></li>
-<li>The server dynamically generates a CAPTCHA challenge (text distortion, image puzzle, etc.).</li>
-<li>
-<p>The challenge must be unique, unpredictable, and resistant to pre-computation.</p>
-</li>
-<li>
-<p><strong>User Interaction</strong></p>
-</li>
-<li>The user attempts to solve the challenge (typing characters, selecting images, checking a box).</li>
-<li>
-<p>The solution is submitted along with the request (e.g., form submission).</p>
-</li>
-<li>
-<p><strong>Validation</strong></p>
-</li>
-<li>The server verifies the solution:<ul>
-<li>If correct → request is processed.</li>
-<li>If incorrect → request is rejected or a new challenge is issued.</li>
-</ul>
-</li>
-</ol>
-<hr />
-<h2 id="core-design-principles">Core Design Principles</h2>
+<h2 id="how-recaptcha-v3-works">How reCAPTCHA v3 Works</h2>
+<h3 id="1-behavioral-analysis">1. Behavioral Analysis</h3>
 <ul>
-<li>
-<p><strong>Automated Creation</strong><br />
-  CAPTCHAs must be generated without human intervention.<br />
-  Example: Randomly warping text with different fonts, noise, and distortions.</p>
-</li>
-<li>
-<p><strong>Easy for Humans</strong><br />
-  The task should be simple enough for most people to solve quickly.<br />
-  Example: Humans are good at recognizing distorted text or identifying objects in pictures.</p>
-</li>
-<li>
-<p><strong>Hard for Machines</strong><br />
-  The task must exploit areas where AI/bots are weak:</p>
-</li>
-<li>OCR struggles with heavily distorted text.</li>
-<li>Image recognition was historically poor at object detection (though AI has improved).</li>
-<li>Logical reasoning puzzles are still a challenge for machines.</li>
+<li>Monitors <strong>user interactions</strong> on the website:</li>
+<li>Mouse movements</li>
+<li>Clicks and scrolls</li>
+<li>Typing patterns</li>
+<li>Page navigation and dwell time</li>
+<li>Detects anomalies compared to typical human behavior.</li>
+</ul>
+<h3 id="2-browser-and-device-signals">2. Browser and Device Signals</h3>
+<ul>
+<li>Collects information about the <strong>browser fingerprint</strong>:</li>
+<li>User agent</li>
+<li>Installed plugins</li>
+<li>Screen resolution</li>
+<li>Timezone</li>
+<li>Uses device characteristics to identify automated or virtual environments.</li>
+</ul>
+<h3 id="3-ip-reputation">3. IP Reputation</h3>
+<ul>
+<li>Google maintains a database of known <strong>malicious IP addresses</strong>.  </li>
+<li>Visitors from suspicious IPs receive <strong>lower scores</strong>.</li>
+</ul>
+<h3 id="4-machine-learning-scoring">4. Machine Learning Scoring</h3>
+<ul>
+<li>Combines behavioral, device, and IP signals.  </li>
+<li>Assigns a <strong>score from 0.0 (bot) to 1.0 (human)</strong>.  </li>
+<li>Site owners define thresholds to decide whether to allow, challenge, or block users.</li>
 </ul>
 <hr />
-<h2 id="example-text-based-captcha">Example: Text-based CAPTCHA</h2>
-<ol>
-<li>Server generates a random string: <code>G7h3P</code>.  </li>
-<li>The string is distorted and placed in an image with background noise.  </li>
-<li>User types what they see.  </li>
-<li>Server compares the input with the original string.</li>
-</ol>
+<h2 id="strengths-of-recaptcha-v3">Strengths of reCAPTCHA v3</h2>
+<ul>
+<li><strong>Invisible:</strong> No visible challenge for users unless suspicious.  </li>
+<li><strong>Seamless user experience:</strong> No interruption for legitimate users.  </li>
+<li><strong>Flexible:</strong> Website owners can adjust the <strong>risk threshold</strong> and actions.  </li>
+<li><strong>Advanced detection:</strong> Leverages Google’s AI and threat intelligence.  </li>
+<li><strong>Continuous learning:</strong> Machine learning improves over time as it observes more traffic patterns.</li>
+</ul>
 <hr />
-<h2 id="example-image-based-captcha">Example: Image-based CAPTCHA</h2>
-<ol>
-<li>User is shown a grid of 9–16 images.  </li>
-<li>Task: <em>“Select all images containing traffic lights.”</em>  </li>
-<li>User selects images.  </li>
-<li>Server validates by checking which tiles contain the correct object.  </li>
-</ol>
-<hr />
-<h2 id="behavioral-analysis-modern-recaptcha">Behavioral Analysis (Modern reCAPTCHA)</h2>
-<p>Modern systems (like reCAPTCHA v3) go beyond puzzles:
-- Track <strong>mouse movement patterns</strong>, <strong>typing rhythm</strong>, and <strong>click timing</strong>.<br />
-- Analyze <strong>IP address reputation</strong> and <strong>browser fingerprinting</strong>.<br />
-- Assign a <strong>“human likelihood score”</strong> without showing a challenge.</p>
+<h2 id="weaknesses-and-limitations">Weaknesses and Limitations</h2>
+<h3 id="1-false-positives-and-negatives">1. False Positives and Negatives</h3>
+<ul>
+<li>Some legitimate users may be flagged as bots:</li>
+<li>Users with unusual browsing behavior</li>
+<li>Users behind VPNs or corporate firewalls</li>
+<li>Some bots may mimic human behavior and evade detection.</li>
+</ul>
+<h3 id="2-privacy-concerns">2. Privacy Concerns</h3>
+<ul>
+<li>Google collects detailed <strong>behavioral data</strong>:</li>
+<li>Mouse movements, keystrokes, clicks</li>
+<li>Browser fingerprinting and IP addresses</li>
+<li>This raises concerns about tracking users across websites.</li>
+</ul>
+<h3 id="3-dependence-on-google">3. Dependence on Google</h3>
+<ul>
+<li>Websites rely on <strong>Google’s infrastructure</strong>:</li>
+<li>If Google services fail, verification may be impacted.  </li>
+<li>Site owners have limited control over scoring logic.</li>
+</ul>
+<h3 id="4-accessibility-challenges">4. Accessibility Challenges</h3>
+<ul>
+<li>Since v3 relies on behavioral analysis, users with <strong>disabilities or atypical interaction patterns</strong> may be misclassified.  </li>
+</ul>
+<h3 id="5-advanced-bot-evasion">5. Advanced Bot Evasion</h3>
+<ul>
+<li>Sophisticated bots using AI can simulate human-like behaviors:</li>
+<li>Mouse jitter</li>
+<li>Randomized scrolls</li>
+<li>Typing delays</li>
+<li>This can bypass the system, though v3 continuously adapts to new patterns.</li>
+</ul>
+<h3 id="6-limited-transparency">6. Limited Transparency</h3>
+<ul>
+<li>Website owners don’t see exactly <strong>how the score is calculated</strong>.  </li>
+<li>Difficult to debug false positives or tune thresholds optimally.</li>
+</ul>
 <hr />
 <h3 id="summary">Summary</h3>
-<p>CAPTCHAs work by combining:
-- Randomized challenge generation
-- Human cognitive strengths
-- Machine learning weaknesses
-- Validation through server-side checks</p>
+<p>reCAPTCHA v3 represents the <strong>future of invisible CAPTCHA systems</strong>, prioritizing user experience and advanced bot detection.<br />
+However, it is <strong>not perfect</strong>: privacy, accessibility, and sophisticated bot evasion remain significant challenges.  </p>
+<p>Site owners must <strong>carefully balance usability and security</strong> when setting risk thresholds.</p>
 <hr />
-<p>Next: We’ll explore the <strong>Types of CAPTCHAs</strong>, from classic text-based versions to modern invisible and behavioral models.</p>
+<p>Next: After this, we can prepare a <strong>final section</strong> discussing the <strong>future of human verification</strong>, emerging technologies beyond CAPTCHA.</p>
 
 
 
