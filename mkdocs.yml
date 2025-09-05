@@ -1,0 +1,10 @@
+site_name: CAPTCHA Documentation
+theme:
+  name: material
+
+nav:
+  - Home: index.md
+  - History: history.md
+  - How it Works: working.md
+  - Types: types.md
+  - reCAPTCHA: recaptcha.md
