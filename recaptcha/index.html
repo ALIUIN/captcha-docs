@@ -59,6 +59,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#google-recaptcha-in-detail" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -281,6 +286,21 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    reCAPTCHA
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -293,6 +313,76 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-recaptcha-v1-2007-2013" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. reCAPTCHA v1 (2007 – 2013)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-recaptcha-v2-2014-present" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. reCAPTCHA v2 (2014 – Present)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-invisible-recaptcha-2017" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Invisible reCAPTCHA (2017)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-recaptcha-v3-2018" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. reCAPTCHA v3 (2018)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. reCAPTCHA v3 (2018)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -315,6 +405,67 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-recaptcha-v1-2007-2013" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. reCAPTCHA v1 (2007 – 2013)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-recaptcha-v2-2014-present" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. reCAPTCHA v2 (2014 – Present)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-invisible-recaptcha-2017" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Invisible reCAPTCHA (2017)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-recaptcha-v3-2018" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. reCAPTCHA v3 (2018)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. reCAPTCHA v3 (2018)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -330,9 +481,68 @@
 
 
 
-  <h1>reCAPTCHA</h1>
-
-
+<h1 id="google-recaptcha-in-detail">Google reCAPTCHA in Detail</h1>
+<p><strong>reCAPTCHA</strong> is a CAPTCHA system developed by <strong>Google</strong> to prevent automated abuse while improving usability.<br />
+It has evolved over the years from text-based challenges to invisible behavioral analysis.</p>
+<hr />
+<h2 id="1-recaptcha-v1-2007-2013">1. reCAPTCHA v1 (2007 – 2013)</h2>
+<ul>
+<li>The original reCAPTCHA helped <strong>digitize books</strong> while protecting websites.  </li>
+<li>Users typed <strong>words from scanned books</strong> that OCR software could not read.  </li>
+<li>Key feature:</li>
+<li>Combines security with a social good: each solved CAPTCHA helped make books searchable.</li>
+</ul>
+<p>✅ <strong>Strengths:</strong> Human-readable, contributed to book digitization.<br />
+❌ <strong>Weaknesses:</strong> Fully text-based, vulnerable to OCR farms.</p>
+<hr />
+<h2 id="2-recaptcha-v2-2014-present">2. reCAPTCHA v2 (2014 – Present)</h2>
+<ul>
+<li>Introduced the <strong>“I’m not a robot” checkbox</strong>.  </li>
+<li>Challenge appears only if the system detects <strong>suspicious activity</strong>.  </li>
+<li>Uses <strong>image recognition puzzles</strong>:</li>
+<li>Select traffic lights, buses, crosswalks, etc.  </li>
+<li>Widely adopted across websites.</li>
+</ul>
+<p>✅ <strong>Strengths:</strong> Harder for bots, widely recognized by users.<br />
+❌ <strong>Weaknesses:</strong> Can be annoying for humans, accessibility issues.</p>
+<hr />
+<h2 id="3-invisible-recaptcha-2017">3. Invisible reCAPTCHA (2017)</h2>
+<ul>
+<li><strong>No user interaction</strong> for most visitors.  </li>
+<li>Runs silently in the background.  </li>
+<li>Only challenges suspicious users.  </li>
+</ul>
+<p><strong>How it works:</strong>
+- Monitors mouse movement, scroll behavior, click patterns.<br />
+- Uses IP reputation and browser fingerprinting.<br />
+- Shows challenge only if risk score is high.</p>
+<p>✅ <strong>Strengths:</strong> Smooth user experience.<br />
+❌ <strong>Weaknesses:</strong> Privacy concerns; depends on behavioral analysis.</p>
+<hr />
+<h2 id="4-recaptcha-v3-2018">4. reCAPTCHA v3 (2018)</h2>
+<ul>
+<li>Completely <strong>score-based</strong> system.  </li>
+<li>Assigns a <strong>risk score</strong> (0.0 = likely bot, 1.0 = likely human).  </li>
+<li>Website owners can define thresholds to block, challenge, or allow traffic.  </li>
+<li>No direct challenge is shown to users.</li>
+</ul>
+<p><strong>How it works:</strong>
+- Tracks behavioral patterns across the site:
+  - Mouse movement
+  - Clicks and scrolls
+  - Navigation patterns
+- Combines these signals with Google’s threat intelligence.</p>
+<p>✅ <strong>Strengths:</strong> Seamless user experience, no visible challenge.<br />
+❌ <strong>Weaknesses:</strong> Requires trust in Google; privacy and data concerns.</p>
+<hr />
+<h3 id="summary">Summary</h3>
+<p>reCAPTCHA demonstrates the <strong>evolution of CAPTCHA systems</strong>:
+- From human-readable text challenges<br />
+➡️ To image-based verification<br />
+➡️ To invisible, behavior-based scoring.  </p>
+<p>The goal remains the same: <strong>distinguish humans from bots</strong> while minimizing user friction.</p>
+<hr />
+<p>Next: We’ll cover <strong>Strengths and Weaknesses of CAPTCHAs</strong>, including accessibility, usability, and security considerations.</p>
 
 
 
